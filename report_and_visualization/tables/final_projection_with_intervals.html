@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Final Projection With 95 Percent Intervals</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    h1 { margin-bottom: 16px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f3f3f3; }
+    tr:nth-child(even) { background: #fafafa; }
+  </style>
+</head>
+<body>
+  <h1>Final Projection With 95 Percent Intervals</h1>
+  <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>geography</th>
+      <th>fiscal_year</th>
+      <th>forecast</th>
+      <th>lower_bound</th>
+      <th>upper_bound</th>
+      <th>forecast_billions</th>
+      <th>lower_bound_billions</th>
+      <th>upper_bound_billions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Michigan</td>
+      <td>2026</td>
+      <td>2.887273e+10</td>
+      <td>2.805744e+10</td>
+      <td>2.965125e+10</td>
+      <td>28.872734</td>
+      <td>28.057436</td>
+      <td>29.651252</td>
+    </tr>
+    <tr>
+      <td>Michigan</td>
+      <td>2027</td>
+      <td>3.058052e+10</td>
+      <td>2.864501e+10</td>
+      <td>3.237980e+10</td>
+      <td>30.580525</td>
+      <td>28.645015</td>
+      <td>32.379803</td>
+    </tr>
+    <tr>
+      <td>Michigan</td>
+      <td>2028</td>
+      <td>3.229299e+10</td>
+      <td>2.879065e+10</td>
+      <td>3.586423e+10</td>
+      <td>32.292994</td>
+      <td>28.790647</td>
+      <td>35.864229</td>
+    </tr>
+    <tr>
+      <td>Michigan</td>
+      <td>2029</td>
+      <td>3.400078e+10</td>
+      <td>2.914855e+10</td>
+      <td>3.961839e+10</td>
+      <td>34.000785</td>
+      <td>29.148548</td>
+      <td>39.618387</td>
+    </tr>
+    <tr>
+      <td>Michigan</td>
+      <td>2030</td>
+      <td>3.570858e+10</td>
+      <td>2.904225e+10</td>
+      <td>4.327807e+10</td>
+      <td>35.708575</td>
+      <td>29.042253</td>
+      <td>43.278074</td>
+    </tr>
+    <tr>
+      <td>Michigan</td>
+      <td>2031</td>
+      <td>3.741637e+10</td>
+      <td>2.898980e+10</td>
+      <td>4.757776e+10</td>
+      <td>37.416366</td>
+      <td>28.989797</td>
+      <td>47.577764</td>
+    </tr>
+    <tr>
+      <td>Michigan</td>
+      <td>2032</td>
+      <td>3.912884e+10</td>
+      <td>2.879271e+10</td>
+      <td>5.139835e+10</td>
+      <td>39.128835</td>
+      <td>28.792705</td>
+      <td>51.398354</td>
+    </tr>
+    <tr>
+      <td>Michigan</td>
+      <td>2033</td>
+      <td>4.083663e+10</td>
+      <td>2.829170e+10</td>
+      <td>5.567041e+10</td>
+      <td>40.836626</td>
+      <td>28.291696</td>
+      <td>55.670408</td>
+    </tr>
+    <tr>
+      <td>Michigan</td>
+      <td>2034</td>
+      <td>4.254442e+10</td>
+      <td>2.782449e+10</td>
+      <td>6.007259e+10</td>
+      <td>42.544416</td>
+      <td>27.824487</td>
+      <td>60.072594</td>
+    </tr>
+    <tr>
+      <td>Michigan</td>
+      <td>2035</td>
+      <td>4.425221e+10</td>
+      <td>2.615230e+10</td>
+      <td>6.500162e+10</td>
+      <td>44.252207</td>
+      <td>26.152303</td>
+      <td>65.001619</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>2026</td>
+      <td>1.099604e+12</td>
+      <td>1.074928e+12</td>
+      <td>1.125308e+12</td>
+      <td>1099.604149</td>
+      <td>1074.927515</td>
+      <td>1125.308461</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>2027</td>
+      <td>1.170278e+12</td>
+      <td>1.117229e+12</td>
+      <td>1.236568e+12</td>
+      <td>1170.277742</td>
+      <td>1117.229399</td>
+      <td>1236.567538</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>2028</td>
+      <td>1.241145e+12</td>
+      <td>1.151209e+12</td>
+      <td>1.355004e+12</td>
+      <td>1241.144961</td>
+      <td>1151.208985</td>
+      <td>1355.003790</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>2029</td>
+      <td>1.311819e+12</td>
+      <td>1.166587e+12</td>
+      <td>1.472893e+12</td>
+      <td>1311.818554</td>
+      <td>1166.586589</td>
+      <td>1472.893230</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>2030</td>
+      <td>1.382492e+12</td>
+      <td>1.185153e+12</td>
+      <td>1.591690e+12</td>
+      <td>1382.492147</td>
+      <td>1185.153470</td>
+      <td>1591.690441</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>2031</td>
+      <td>1.453166e+12</td>
+      <td>1.198280e+12</td>
+      <td>1.718694e+12</td>
+      <td>1453.165740</td>
+      <td>1198.279591</td>
+      <td>1718.694483</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>2032</td>
+      <td>1.524033e+12</td>
+      <td>1.210565e+12</td>
+      <td>1.850064e+12</td>
+      <td>1524.032960</td>
+      <td>1210.564957</td>
+      <td>1850.063630</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>2033</td>
+      <td>1.594707e+12</td>
+      <td>1.221948e+12</td>
+      <td>1.976998e+12</td>
+      <td>1594.706553</td>
+      <td>1221.947580</td>
+      <td>1976.997759</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>2034</td>
+      <td>1.665380e+12</td>
+      <td>1.211959e+12</td>
+      <td>2.125828e+12</td>
+      <td>1665.380146</td>
+      <td>1211.958838</td>
+      <td>2125.827611</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>2035</td>
+      <td>1.736054e+12</td>
+      <td>1.194914e+12</td>
+      <td>2.298220e+12</td>
+      <td>1736.053739</td>
+      <td>1194.913642</td>
+      <td>2298.220499</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

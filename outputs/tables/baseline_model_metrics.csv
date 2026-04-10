@@ -1,0 +1,5 @@
+geography,model,train_end_year,test_start_year,test_end_year,mae,rmse,mape
+Michigan,linear_regression,2022,2023,2025,1848128323.06,1983664301.41,7.12
+Michigan,polynomial_regression_degree_2,2022,2023,2025,2432728381.78,2593707374.40,9.38
+United States,linear_regression,2022,2023,2025,112706434239.52,116157169999.68,11.64
+United States,polynomial_regression_degree_2,2022,2023,2025,47102709358.58,47978768922.10,4.89

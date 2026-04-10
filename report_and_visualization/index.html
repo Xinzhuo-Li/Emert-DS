@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medicaid Expenditure Projection Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 32px auto;
+      max-width: 1180px;
+      color: #1f2937;
+      line-height: 1.6;
+      padding: 0 20px 48px;
+      background: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #111827;
+    }
+    h2 {
+      margin-top: 34px;
+    }
+    .meta, .note {
+      color: #4b5563;
+    }
+    .summary-box, .section-box {
+      background: #f8fafc;
+      border: 1px solid #dbe3ea;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 20px 0 28px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 20px 0 28px;
+    }
+    .card {
+      border: 1px solid #dbe3ea;
+      border-radius: 10px;
+      padding: 16px 18px;
+      background: #ffffff;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+      margin: 18px 0 28px;
+    }
+    .figure {
+      padding: 16px;
+      border: 1px solid #dbe3ea;
+      border-radius: 10px;
+      background: #ffffff;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #fff;
+      margin-top: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 14px;
+      background: #ffffff;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    th {
+      background: #f3f4f6;
+    }
+    .status-ok {
+      color: #166534;
+      font-weight: 700;
+    }
+    .status-partial {
+      color: #92400e;
+      font-weight: 700;
+    }
+    .links a {
+      display: inline-block;
+      margin: 6px 14px 6px 0;
+    }
+    .footer {
+      margin-top: 36px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 14px;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+  <h1>Medicaid Expenditure Projection Report</h1>
+  <p class="meta">
+    Consolidated report and visualization package aligned to the project's Output &amp; Visualization requirements.
+  </p>
+
+  <div class="summary-box">
+    <h2>Project Scope</h2>
+    <p>
+      This project forecasts Medicaid expenditures for Michigan and the United States using annual data
+      from 2013 to 2025, then generates 10-year projections for 2026 to 2035 with 95 percent confidence intervals.
+    </p>
+    <ul>
+      <li>State forecast target: <strong>Michigan</strong></li>
+      <li>National forecast target: <strong>United States</strong></li>
+      <li>Selected final model for both geographies: <strong>Prophet</strong></li>
+      <li>Evaluation window: <strong>2023 to 2025</strong></li>
+    </ul>
+  </div>
+
+  <h2>Requirement Checklist</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Requirement</th>
+        <th>Status</th>
+        <th>Evidence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Generate a 10-year projection table with point estimates and 95 percent confidence intervals</td>
+        <td class="status-ok">Completed</td>
+        <td>`tables/final_projection_with_intervals.csv` and `tables/final_projection_with_intervals.html`</td>
+      </tr>
+      <tr>
+        <td>Plot historical vs. projected expenditures</td>
+        <td class="status-ok">Completed</td>
+        <td>Final projection plots for Michigan and the United States are included below</td>
+      </tr>
+      <tr>
+        <td>Export results to HTML</td>
+        <td class="status-ok">Completed</td>
+        <td>This packaged report plus HTML table exports are included in this folder</td>
+      </tr>
+      <tr>
+        <td>Export results to PDF</td>
+        <td class="status-ok">Completed</td>
+        <td>`medicaid_expenditure_projection_report.pdf` is generated in this folder</td>
+      </tr>
+      <tr>
+        <td>Optional interactive dashboard using Plotly or Streamlit</td>
+        <td>Optional and not required</td>
+        <td>Not included</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Key Results</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Michigan</h3>
+      <p><strong>Best model:</strong> Prophet</p>
+      <p><strong>Holdout MAPE:</strong> 6.71%</p>
+      <p><strong>Projected 2026 spending:</strong> $28.87B</p>
+      <p><strong>Projected 2035 spending:</strong> $44.25B</p>
+    </div>
+    <div class="card">
+      <h3>United States</h3>
+      <p><strong>Best model:</strong> Prophet</p>
+      <p><strong>Holdout MAPE:</strong> 0.64%</p>
+      <p><strong>Projected 2026 spending:</strong> $1099.60B</p>
+      <p><strong>Projected 2035 spending:</strong> $1736.05B</p>
+    </div>
+  </div>
+
+  <div class="section-box">
+    <h2>10-Year Forecast With 95 Percent Confidence Intervals</h2>
+    <p>
+      The project includes a full 10-year confidence-interval forecast for both Michigan and the United States.
+      The forecast horizon runs from <strong>2026 through 2035</strong>.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Geography</th>
+          <th>Year</th>
+          <th>Forecast (Billions)</th>
+          <th>Lower 95% Bound</th>
+          <th>Upper 95% Bound</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Michigan</td><td>2026</td><td>28.87</td><td>28.06</td><td>29.65</td></tr>
+<tr><td>Michigan</td><td>2027</td><td>30.58</td><td>28.65</td><td>32.38</td></tr>
+<tr><td>Michigan</td><td>2028</td><td>32.29</td><td>28.79</td><td>35.86</td></tr>
+<tr><td>Michigan</td><td>2029</td><td>34.00</td><td>29.15</td><td>39.62</td></tr>
+<tr><td>Michigan</td><td>2030</td><td>35.71</td><td>29.04</td><td>43.28</td></tr>
+<tr><td>Michigan</td><td>2031</td><td>37.42</td><td>28.99</td><td>47.58</td></tr>
+<tr><td>Michigan</td><td>2032</td><td>39.13</td><td>28.79</td><td>51.40</td></tr>
+<tr><td>Michigan</td><td>2033</td><td>40.84</td><td>28.29</td><td>55.67</td></tr>
+<tr><td>Michigan</td><td>2034</td><td>42.54</td><td>27.82</td><td>60.07</td></tr>
+<tr><td>Michigan</td><td>2035</td><td>44.25</td><td>26.15</td><td>65.00</td></tr>
+<tr><td>United States</td><td>2026</td><td>1099.60</td><td>1074.93</td><td>1125.31</td></tr>
+<tr><td>United States</td><td>2027</td><td>1170.28</td><td>1117.23</td><td>1236.57</td></tr>
+<tr><td>United States</td><td>2028</td><td>1241.14</td><td>1151.21</td><td>1355.00</td></tr>
+<tr><td>United States</td><td>2029</td><td>1311.82</td><td>1166.59</td><td>1472.89</td></tr>
+<tr><td>United States</td><td>2030</td><td>1382.49</td><td>1185.15</td><td>1591.69</td></tr>
+<tr><td>United States</td><td>2031</td><td>1453.17</td><td>1198.28</td><td>1718.69</td></tr>
+<tr><td>United States</td><td>2032</td><td>1524.03</td><td>1210.56</td><td>1850.06</td></tr>
+<tr><td>United States</td><td>2033</td><td>1594.71</td><td>1221.95</td><td>1977.00</td></tr>
+<tr><td>United States</td><td>2034</td><td>1665.38</td><td>1211.96</td><td>2125.83</td></tr>
+<tr><td>United States</td><td>2035</td><td>1736.05</td><td>1194.91</td><td>2298.22</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Model Comparison Summary</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Geography</th>
+        <th>Model</th>
+        <th>Model Family</th>
+        <th>Holdout MAPE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Michigan</td><td>Linear Regression</td><td>Baseline</td><td>7.12%</td></tr>
+<tr><td>Michigan</td><td>Polynomial Regression (Degree 2)</td><td>Baseline</td><td>9.38%</td></tr>
+<tr><td>United States</td><td>Linear Regression</td><td>Baseline</td><td>11.64%</td></tr>
+<tr><td>United States</td><td>Polynomial Regression (Degree 2)</td><td>Baseline</td><td>4.89%</td></tr>
+<tr><td>Michigan</td><td>ARIMA</td><td>Time Series</td><td>7.20%</td></tr>
+<tr><td>Michigan</td><td>Holt-Winters</td><td>Time Series</td><td>7.81%</td></tr>
+<tr><td>Michigan</td><td><strong>Prophet</strong></td><td>Time Series</td><td><strong>6.71%</strong></td></tr>
+<tr><td>United States</td><td>ARIMA</td><td>Time Series</td><td>3.40%</td></tr>
+<tr><td>United States</td><td>Holt-Winters</td><td>Time Series</td><td>2.74%</td></tr>
+<tr><td>United States</td><td><strong>Prophet</strong></td><td>Time Series</td><td><strong>0.64%</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Final Historical vs. Projected Expenditure Plots</h2>
+  <div class="gallery">
+    <div class="figure">
+      <h3>Michigan Final Projection</h3>
+      <p class="note">Historical values plus 2026-2035 forecast with 95 percent interval.</p>
+      <img src="figures/all/michigan_final_projection.png" alt="Michigan Final Projection">
+    </div>
+    <div class="figure">
+      <h3>United States Final Projection</h3>
+      <p class="note">Historical values plus 2026-2035 forecast with 95 percent interval.</p>
+      <img src="figures/all/united_states_final_projection.png" alt="United States Final Projection">
+    </div>
+  </div>
+
+  <h2>EDA Visualizations</h2><div class="gallery"><div class="figure"><h3>Michigan Expenditure Trend</h3><p class="note">Observed Michigan Medicaid expenditures across the historical window.</p><img src="figures/all/michigan_expenditure_trend.png" alt="Michigan Expenditure Trend"></div>
+<div class="figure"><h3>National Expenditure Trend</h3><p class="note">Observed United States Medicaid expenditures across the historical window.</p><img src="figures/all/national_expenditure_trend.png" alt="National Expenditure Trend"></div>
+<div class="figure"><h3>Michigan YoY Growth</h3><p class="note">Year-over-year growth in Michigan Medicaid expenditures.</p><img src="figures/all/michigan_yoy_growth.png" alt="Michigan YoY Growth"></div>
+<div class="figure"><h3>National YoY Growth</h3><p class="note">Year-over-year growth in United States Medicaid expenditures.</p><img src="figures/all/national_yoy_growth.png" alt="National YoY Growth"></div>
+<div class="figure"><h3>Michigan vs National YoY Growth</h3><p class="note">Comparison of annual growth rates between Michigan and the United States.</p><img src="figures/all/michigan_vs_national_yoy_growth.png" alt="Michigan vs National YoY Growth"></div>
+<div class="figure"><h3>Michigan Trend and Residual Assessment</h3><p class="note">Trend and residual view used to assess structural movement in annual data.</p><img src="figures/all/michigan_trend_residual_assessment.png" alt="Michigan Trend and Residual Assessment"></div>
+<div class="figure"><h3>National Trend and Residual Assessment</h3><p class="note">Trend and residual view used to assess structural movement in annual data.</p><img src="figures/all/national_trend_residual_assessment.png" alt="National Trend and Residual Assessment"></div></div>
+<h2>Baseline Forecast Holdout Visualizations</h2><div class="gallery"><div class="figure"><h3>Michigan Linear Regression Holdout</h3><p class="note">Holdout comparison for the linear regression baseline.</p><img src="figures/all/michigan_linear_regression_holdout.png" alt="Michigan Linear Regression Holdout"></div>
+<div class="figure"><h3>Michigan Polynomial Regression Holdout</h3><p class="note">Holdout comparison for the second-degree polynomial baseline.</p><img src="figures/all/michigan_polynomial_regression_degree_2_holdout.png" alt="Michigan Polynomial Regression Holdout"></div>
+<div class="figure"><h3>United States Linear Regression Holdout</h3><p class="note">Holdout comparison for the linear regression baseline.</p><img src="figures/all/united_states_linear_regression_holdout.png" alt="United States Linear Regression Holdout"></div>
+<div class="figure"><h3>United States Polynomial Regression Holdout</h3><p class="note">Holdout comparison for the second-degree polynomial baseline.</p><img src="figures/all/united_states_polynomial_regression_degree_2_holdout.png" alt="United States Polynomial Regression Holdout"></div></div>
+<h2>Time-Series Forecast Holdout Visualizations</h2><div class="gallery"><div class="figure"><h3>Michigan ARIMA Holdout</h3><p class="note">Holdout comparison for the ARIMA model.</p><img src="figures/all/michigan_arima_holdout.png" alt="Michigan ARIMA Holdout"></div>
+<div class="figure"><h3>Michigan Holt-Winters Holdout</h3><p class="note">Holdout comparison for the Holt-Winters model.</p><img src="figures/all/michigan_holt_winters_holdout.png" alt="Michigan Holt-Winters Holdout"></div>
+<div class="figure"><h3>Michigan Prophet Holdout</h3><p class="note">Holdout comparison for the Prophet model.</p><img src="figures/all/michigan_prophet_holdout.png" alt="Michigan Prophet Holdout"></div>
+<div class="figure"><h3>United States ARIMA Holdout</h3><p class="note">Holdout comparison for the ARIMA model.</p><img src="figures/all/united_states_arima_holdout.png" alt="United States ARIMA Holdout"></div>
+<div class="figure"><h3>United States Holt-Winters Holdout</h3><p class="note">Holdout comparison for the Holt-Winters model.</p><img src="figures/all/united_states_holt_winters_holdout.png" alt="United States Holt-Winters Holdout"></div>
+<div class="figure"><h3>United States Prophet Holdout</h3><p class="note">Holdout comparison for the Prophet model.</p><img src="figures/all/united_states_prophet_holdout.png" alt="United States Prophet Holdout"></div></div>
+<h2>Model Selection Comparison Charts</h2><div class="gallery"><div class="figure"><h3>Michigan MAPE Comparison</h3><p class="note">Lower MAPE indicates better holdout performance.</p><img src="figures/all/michigan_model_mape_comparison.png" alt="Michigan MAPE Comparison"></div>
+<div class="figure"><h3>United States MAPE Comparison</h3><p class="note">Lower MAPE indicates better holdout performance.</p><img src="figures/all/united_states_model_mape_comparison.png" alt="United States MAPE Comparison"></div></div>
+
+  <h2>Included Tables and Exports</h2>
+  <div class="links">
+    <a href="tables/final_results_summary.csv">Final results summary CSV</a>
+    <a href="tables/final_results_summary.html">Final results summary HTML</a>
+    <a href="tables/final_projection_with_intervals.csv">Projection with intervals CSV</a>
+    <a href="tables/final_projection_with_intervals.html">Projection with intervals HTML</a>
+    <a href="tables/model_comparison_metrics.csv">Model comparison metrics CSV</a>
+    <a href="tables/selected_models.csv">Selected models CSV</a>
+    <a href="medicaid_expenditure_projection_report.pdf">Final report PDF</a>
+  </div>
+
+  <div class="footer">
+    This folder contains the final packaged report, charts, and tables for presentation and GitHub submission.
+  </div>
+</body>
+</html>

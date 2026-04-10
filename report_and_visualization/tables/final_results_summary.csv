@@ -1,0 +1,3 @@
+geography,selected_model,model_family,holdout_mape,forecast_start_year,forecast_end_year,forecast_start_billions,forecast_end_billions
+Michigan,prophet,time_series,6.71,2026,2035,28.87,44.25
+United States,prophet,time_series,0.64,2026,2035,1099.6,1736.05

@@ -1,0 +1,3 @@
+geography,start_year,end_year,start_expenditure,end_expenditure,absolute_change,percent_change,min_yoy_growth_pct,max_yoy_growth_pct,mean_yoy_growth_pct
+Michigan,2013,2025,12970899451.00,27306729224.00,14335829773.00,110.52,-1.61,17.06,6.51
+United States,2013,2025,453082711064.00,1031704529255.63,578621818191.63,127.71,0.48,12.28,7.16

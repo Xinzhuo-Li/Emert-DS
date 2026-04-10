@@ -1,0 +1,6 @@
+dataset,min_year,max_year,row_count,missing_total_medicaid_expenditures,notes
+medicaid_states_only_observed,2013,2025,643,0,Observed state rows only; North Dakota is absent before 2020.
+medicaid_states_only_balanced,2013,2025,650,7,Balanced 50-state panel with placeholder rows for missing state-year combinations.
+medicaid_michigan_timeseries,2013,2025,13,0,Michigan annual series for direct state-level EDA and forecasting.
+medicaid_national_timeseries,2013,2025,13,0,National annual series taken from workbook total rows.
+medicaid_eda_ready,2013,2025,26,0,Combined Michigan and United States series with year-over-year growth metrics.

@@ -1,0 +1,61 @@
+geography,model,fiscal_year,forecast
+Michigan,arima,2026,28412331455.45
+Michigan,arima,2027,30356263419.22
+Michigan,arima,2028,31466973339.54
+Michigan,arima,2029,33405828734.04
+Michigan,arima,2030,34521584293.63
+Michigan,arima,2031,36455424790.41
+Michigan,arima,2032,37576164693.46
+Michigan,arima,2033,39505051214.88
+Michigan,arima,2034,40630714910.23
+Michigan,arima,2035,42554707638.52
+Michigan,holt_winters,2026,28470953811.46
+Michigan,holt_winters,2027,29635178410.61
+Michigan,holt_winters,2028,30799403009.76
+Michigan,holt_winters,2029,31963627608.91
+Michigan,holt_winters,2030,33127852208.07
+Michigan,holt_winters,2031,34292076807.22
+Michigan,holt_winters,2032,35456301406.37
+Michigan,holt_winters,2033,36620526005.52
+Michigan,holt_winters,2034,37784750604.68
+Michigan,holt_winters,2035,38948975203.83
+Michigan,prophet,2026,28872734005.35
+Michigan,prophet,2027,30580524560.85
+Michigan,prophet,2028,32292993994.58
+Michigan,prophet,2029,34000784550.08
+Michigan,prophet,2030,35708575105.57
+Michigan,prophet,2031,37416365661.07
+Michigan,prophet,2032,39128835094.80
+Michigan,prophet,2033,40836625650.30
+Michigan,prophet,2034,42544416205.80
+Michigan,prophet,2035,44252206761.29
+United States,arima,2026,1114562407327.16
+United States,arima,2027,1197420285398.69
+United States,arima,2028,1280278163470.22
+United States,arima,2029,1363136041541.75
+United States,arima,2030,1445993919613.28
+United States,arima,2031,1528851797684.81
+United States,arima,2032,1611709675756.34
+United States,arima,2033,1694567553827.87
+United States,arima,2034,1777425431899.40
+United States,arima,2035,1860283309970.93
+United States,holt_winters,2026,1106220040076.16
+United States,holt_winters,2027,1180735551216.15
+United States,holt_winters,2028,1255251062356.13
+United States,holt_winters,2029,1329766573496.12
+United States,holt_winters,2030,1404282084636.10
+United States,holt_winters,2031,1478797595776.09
+United States,holt_winters,2032,1553313106916.08
+United States,holt_winters,2033,1627828618056.06
+United States,holt_winters,2034,1702344129196.05
+United States,holt_winters,2035,1776859640336.03
+United States,prophet,2026,1099604148870.02
+United States,prophet,2027,1170277741921.35
+United States,prophet,2028,1241144961255.01
+United States,prophet,2029,1311818554306.35
+United States,prophet,2030,1382492147357.68
+United States,prophet,2031,1453165740409.01
+United States,prophet,2032,1524032959742.67
+United States,prophet,2033,1594706552794.01
+United States,prophet,2034,1665380145845.34
+United States,prophet,2035,1736053738896.67

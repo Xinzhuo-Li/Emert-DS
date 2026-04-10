@@ -1,0 +1,41 @@
+geography,model,fiscal_year,forecast
+Michigan,linear_regression,2026,26991001438.62
+Michigan,linear_regression,2027,28058054141.93
+Michigan,linear_regression,2028,29125106845.25
+Michigan,linear_regression,2029,30192159548.57
+Michigan,linear_regression,2030,31259212251.89
+Michigan,linear_regression,2031,32326264955.21
+Michigan,linear_regression,2032,33393317658.53
+Michigan,linear_regression,2033,34460370361.85
+Michigan,linear_regression,2034,35527423065.16
+Michigan,linear_regression,2035,36594475768.48
+Michigan,polynomial_regression_degree_2,2026,28274898486.34
+Michigan,polynomial_regression_degree_2,2027,29892192781.53
+Michigan,polynomial_regression_degree_2,2028,31582852622.31
+Michigan,polynomial_regression_degree_2,2029,33346878008.66
+Michigan,polynomial_regression_degree_2,2030,35184268940.66
+Michigan,polynomial_regression_degree_2,2031,37095025418.19
+Michigan,polynomial_regression_degree_2,2032,39079147441.28
+Michigan,polynomial_regression_degree_2,2033,41136635010.00
+Michigan,polynomial_regression_degree_2,2034,43267488124.28
+Michigan,polynomial_regression_degree_2,2035,45471706784.16
+United States,linear_regression,2026,1010334904306.23
+United States,linear_regression,2027,1055758542542.11
+United States,linear_regression,2028,1101182180777.97
+United States,linear_regression,2029,1146605819013.83
+United States,linear_regression,2030,1192029457249.70
+United States,linear_regression,2031,1237453095485.56
+United States,linear_regression,2032,1282876733721.44
+United States,linear_regression,2033,1328300371957.30
+United States,linear_regression,2034,1373724010193.16
+United States,linear_regression,2035,1419147648429.03
+United States,polynomial_regression_degree_2,2026,1108643413102.00
+United States,polynomial_regression_degree_2,2027,1196199269392.00
+United States,polynomial_regression_degree_2,2028,1289372754758.00
+United States,polynomial_regression_degree_2,2029,1388163869198.00
+United States,polynomial_regression_degree_2,2030,1492572612712.00
+United States,polynomial_regression_degree_2,2031,1602598985300.00
+United States,polynomial_regression_degree_2,2032,1718242986962.00
+United States,polynomial_regression_degree_2,2033,1839504617700.00
+United States,polynomial_regression_degree_2,2034,1966383877510.00
+United States,polynomial_regression_degree_2,2035,2098880766396.00

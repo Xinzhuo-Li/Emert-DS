@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Final Results Summary</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    h1 { margin-bottom: 16px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f3f3f3; }
+    tr:nth-child(even) { background: #fafafa; }
+  </style>
+</head>
+<body>
+  <h1>Final Results Summary</h1>
+  <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>geography</th>
+      <th>selected_model</th>
+      <th>model_family</th>
+      <th>holdout_mape</th>
+      <th>forecast_start_year</th>
+      <th>forecast_end_year</th>
+      <th>forecast_start_billions</th>
+      <th>forecast_end_billions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Michigan</td>
+      <td>prophet</td>
+      <td>time_series</td>
+      <td>6.71</td>
+      <td>2026</td>
+      <td>2035</td>
+      <td>28.87</td>
+      <td>44.25</td>
+    </tr>
+    <tr>
+      <td>United States</td>
+      <td>prophet</td>
+      <td>time_series</td>
+      <td>0.64</td>
+      <td>2026</td>
+      <td>2035</td>
+      <td>1099.60</td>
+      <td>1736.05</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

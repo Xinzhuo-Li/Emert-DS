@@ -1,0 +1,3 @@
+geography,data_frequency,seasonality_estimable,trend_method,residual_definition,note
+Michigan,annual,no,3-year centered rolling average,observed minus rolling trend,"With annual data and only 13 observations, within-year seasonality cannot be meaningfully estimated. The decomposition step therefore focuses on trend and residual assessment only."
+United States,annual,no,3-year centered rolling average,observed minus rolling trend,"With annual data and only 13 observations, within-year seasonality cannot be meaningfully estimated. The decomposition step therefore focuses on trend and residual assessment only."

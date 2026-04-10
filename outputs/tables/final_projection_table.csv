@@ -1,0 +1,21 @@
+geography,model_family,selected_model,fiscal_year,forecast,projection_note
+Michigan,time_series,prophet,2026,28872734005.35,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+Michigan,time_series,prophet,2027,30580524560.85,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+Michigan,time_series,prophet,2028,32292993994.58,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+Michigan,time_series,prophet,2029,34000784550.08,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+Michigan,time_series,prophet,2030,35708575105.57,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+Michigan,time_series,prophet,2031,37416365661.07,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+Michigan,time_series,prophet,2032,39128835094.8,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+Michigan,time_series,prophet,2033,40836625650.3,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+Michigan,time_series,prophet,2034,42544416205.8,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+Michigan,time_series,prophet,2035,44252206761.29,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,2026,1099604148870.02,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,2027,1170277741921.35,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,2028,1241144961255.01,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,2029,1311818554306.35,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,2030,1382492147357.68,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,2031,1453165740409.01,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,2032,1524032959742.67,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,2033,1594706552794.01,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,2034,1665380145845.34,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,2035,1736053738896.67,Selected as lowest-MAPE model on the 2023-2025 holdout window.

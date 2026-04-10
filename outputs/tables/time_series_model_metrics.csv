@@ -1,0 +1,7 @@
+geography,model,model_details,train_end_year,test_start_year,test_end_year,mae,rmse,mape
+Michigan,arima,"order=(1, 2, 1)",2022,2023,2025,1874605435.81,2043074937.14,7.20
+Michigan,holt_winters,holt_winters_additive,2022,2023,2025,2026125304.66,2165374071.43,7.81
+Michigan,prophet,linear_growth_no_seasonality,2022,2023,2025,1742600946.76,1867808861.48,6.71
+United States,arima,"order=(0, 2, 0)",2022,2023,2025,33126607683.76,35702415248.31,3.40
+United States,holt_winters,holt_winters_additive,2022,2023,2025,26688505965.20,29144349989.41,2.74
+United States,prophet,linear_growth_no_seasonality,2022,2023,2025,6119587188.18,8110079553.23,0.64
