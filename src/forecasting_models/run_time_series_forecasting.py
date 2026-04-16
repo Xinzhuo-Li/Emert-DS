@@ -42,7 +42,8 @@ def read_holdout(path: Path) -> pd.DataFrame:
 def merge_metrics() -> None:
     baseline = pd.read_csv(TABLES_DIR / "baseline_model_metrics.csv")
     baseline["model_family"] = "baseline"
-    baseline["model_details"] = ""
+    if "model_details" not in baseline.columns:
+        baseline["model_details"] = ""
 
     time_series = pd.read_csv(TABLES_DIR / "time_series_model_metrics.csv")
     time_series["model_family"] = "time_series"

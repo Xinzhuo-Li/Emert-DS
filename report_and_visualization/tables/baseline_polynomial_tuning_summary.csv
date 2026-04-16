@@ -1,0 +1,7 @@
+geography,candidate_degree,rolling_cv_mape,selected_degree,selected,selection_rule
+Michigan,2,6.97,2,yes,Lowest rolling CV MAPE within 1.0 MAPE point of the best score; choose the simplest degree among eligible candidates.
+Michigan,3,11.40,2,no,Lowest rolling CV MAPE within 1.0 MAPE point of the best score; choose the simplest degree among eligible candidates.
+Michigan,4,16.85,2,no,Lowest rolling CV MAPE within 1.0 MAPE point of the best score; choose the simplest degree among eligible candidates.
+United States,2,4.95,2,yes,Lowest rolling CV MAPE within 1.0 MAPE point of the best score; choose the simplest degree among eligible candidates.
+United States,3,4.05,2,no,Lowest rolling CV MAPE within 1.0 MAPE point of the best score; choose the simplest degree among eligible candidates.
+United States,4,9.22,2,no,Lowest rolling CV MAPE within 1.0 MAPE point of the best score; choose the simplest degree among eligible candidates.

@@ -1,3 +1,3 @@
 geography,model_family,model,model_details,train_end_year,test_start_year,test_end_year,mae,rmse,mape,selection_reason
-Michigan,time_series,prophet,linear_growth_no_seasonality,2022,2023,2025,1742600946.76,1867808861.48,6.71,Selected as lowest-MAPE model on the 2023-2025 holdout window.
-United States,time_series,prophet,linear_growth_no_seasonality,2022,2023,2025,6119587188.18,8110079553.23,0.64,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+Michigan,time_series,prophet,linear_growth_no_seasonality; changepoint_prior_scale=0.05; n_changepoints=5; rolling_cv_mape=1.12,2022,2023,2025,1838739450.41,1974614390.01,7.08,Selected as lowest-MAPE model on the 2023-2025 holdout window.
+United States,time_series,prophet,linear_growth_no_seasonality; changepoint_prior_scale=0.50; n_changepoints=5; rolling_cv_mape=4.76,2022,2023,2025,7083680428.23,9302608106.34,0.74,Selected as lowest-MAPE model on the 2023-2025 holdout window.

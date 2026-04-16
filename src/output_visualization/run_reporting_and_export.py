@@ -46,23 +46,49 @@ def prophet_history_to_frame(frame: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-def fit_final_prophet(history: pd.DataFrame) -> Prophet:
+def parse_prophet_config(model_details: str) -> tuple[float, int]:
+    changepoint_prior_scale = 0.2
+    n_changepoints = 5
+    for part in str(model_details).split(";"):
+        cleaned = part.strip()
+        if cleaned.startswith("changepoint_prior_scale="):
+            changepoint_prior_scale = float(cleaned.split("=", 1)[1])
+        elif cleaned.startswith("n_changepoints="):
+            n_changepoints = int(cleaned.split("=", 1)[1])
+    return changepoint_prior_scale, n_changepoints
+
+
+def fit_final_prophet(
+    history: pd.DataFrame,
+    changepoint_prior_scale: float = 0.2,
+    n_changepoints: int = 5,
+) -> Prophet:
     from prophet import Prophet
 
+    effective_n_changepoints = min(n_changepoints, max(0, len(history) - 2))
     model = Prophet(
         yearly_seasonality=False,
         weekly_seasonality=False,
         daily_seasonality=False,
         interval_width=0.95,
-        changepoint_prior_scale=0.2,
-        n_changepoints=5,
+        changepoint_prior_scale=changepoint_prior_scale,
+        n_changepoints=effective_n_changepoints,
     )
     model.fit(prophet_history_to_frame(history))
     return model
 
 
-def build_forecast_table(geography: str, history: pd.DataFrame) -> pd.DataFrame:
-    model = fit_final_prophet(history)
+def build_forecast_table(
+    geography: str,
+    history: pd.DataFrame,
+    changepoint_prior_scale: float = 0.2,
+    n_changepoints: int = 5,
+) -> pd.DataFrame:
+    model = fit_final_prophet(
+        history,
+        changepoint_prior_scale=changepoint_prior_scale,
+        n_changepoints=n_changepoints,
+    )
     future = model.make_future_dataframe(periods=10, freq="YE")
     forecast = model.predict(future).tail(10).copy()
 
@@ -107,6 +133,10 @@ def train_only() -> None:
     logging.getLogger("cmdstanpy").setLevel(logging.WARNING)
     os.environ.setdefault("MPLCONFIGDIR", str(ROOT_DIR / ".matplotlib-cache"))
 
+    selected_models = pd.read_csv(TABLES_DIR / "selected_models.csv")
+    selected_lookup = {
+        row["geography"]: row for _, row in selected_models.iterrows()
+    }
     history_map = {
         "Michigan": load_history(PROCESSED_DIR / "medicaid_michigan_timeseries.csv"),
         "United States": load_history(PROCESSED_DIR / "medicaid_national_timeseries.csv"),
@@ -114,7 +144,16 @@ def train_only() -> None:
 
     final_forecasts = []
     for geography, history in history_map.items():
-        forecast_table = build_forecast_table(geography, history)
+        selection = selected_lookup[geography]
+        changepoint_prior_scale, n_changepoints = parse_prophet_config(
+            selection.get("model_details", "")
+        )
+        forecast_table = build_forecast_table(
+            geography,
+            history,
+            changepoint_prior_scale=changepoint_prior_scale,
+            n_changepoints=n_changepoints,
+        )
         final_forecasts.append(forecast_table)
 
     final_projection_with_intervals = pd.concat(final_forecasts, ignore_index=True)

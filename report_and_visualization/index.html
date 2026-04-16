@@ -242,6 +242,81 @@
     </tbody>
   </table>
 
+  <div class="section-box">
+    <h2>Baseline Polynomial Tuning</h2>
+    <p>
+      I lightly tuned the polynomial baseline by testing candidate degrees 2, 3, and 4
+      using expanding-window one-step-ahead rolling validation inside the training period.
+      I kept the final 2023-2025 holdout untouched for model comparison. The selection rule
+      was predefined: choose the lowest rolling-validation MAPE, but if a simpler degree is
+      within 1.0 MAPE point of the best score, keep the simpler model.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Geography</th>
+          <th>Candidate Degree</th>
+          <th>Rolling CV MAPE</th>
+          <th>Selected Degree</th>
+          <th>Selected</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Michigan</td><td>2</td><td>6.97%</td><td>2</td><td>Yes</td></tr>
+        <tr><td>Michigan</td><td>3</td><td>11.40%</td><td>2</td><td>No</td></tr>
+        <tr><td>Michigan</td><td>4</td><td>16.85%</td><td>2</td><td>No</td></tr>
+        <tr><td>United States</td><td>2</td><td>4.95%</td><td>2</td><td>Yes</td></tr>
+        <tr><td>United States</td><td>3</td><td>4.05%</td><td>2</td><td>No</td></tr>
+        <tr><td>United States</td><td>4</td><td>9.22%</td><td>2</td><td>No</td></tr>
+      </tbody>
+    </table>
+    <p class="note">
+      The United States series is the key example of why the selection rule matters. Degree 3
+      achieved the lowest internal rolling-validation MAPE, but degree 2 was only 0.90 MAPE points
+      worse. Because that difference was within the predefined 1.0-point tolerance, degree 2 was
+      selected as the simpler and more conservative baseline. This keeps the polynomial model in
+      the role of a benchmark rather than over-optimizing it into a more complex trend model.
+    </p>
+  </div>
+
+  <div class="section-box">
+    <h2>Time-Series Model Tuning</h2>
+    <p>
+      I also added lightweight, time-aware tuning evidence for the advanced models. ARIMA candidate
+      orders were compared using expanding-window rolling validation and one-step-ahead forecast error,
+      with AIC retained as a secondary fit statistic. Holt-Winters candidates were compared across
+      simple exponential smoothing, additive trend, and additive damped trend configurations, using
+      rolling-validation MAPE as the primary selection criterion. Prophet was tuned with a small grid
+      over changepoint flexibility and changepoint count, again using rolling-validation MAPE while
+      keeping the final 2023-2025 holdout untouched.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Geography</th>
+          <th>Model</th>
+          <th>Selected Configuration</th>
+          <th>Rolling CV MAPE</th>
+          <th>Final Holdout MAPE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Michigan</td><td>ARIMA</td><td>order=(2, 2, 0)</td><td>3.39%</td><td>11.51%</td></tr>
+        <tr><td>Michigan</td><td>Holt-Winters</td><td>holt_winters_additive</td><td>2.87%</td><td>7.12%</td></tr>
+        <tr><td>Michigan</td><td>Prophet</td><td>changepoint_prior_scale=0.05; n_changepoints=5</td><td>1.12%</td><td>7.08%</td></tr>
+        <tr><td>United States</td><td>ARIMA</td><td>order=(1, 2, 1)</td><td>2.82%</td><td>3.10%</td></tr>
+        <tr><td>United States</td><td>Holt-Winters</td><td>holt_winters_additive_damped</td><td>5.87%</td><td>2.59%</td></tr>
+        <tr><td>United States</td><td>Prophet</td><td>changepoint_prior_scale=0.50; n_changepoints=5</td><td>4.76%</td><td>0.74%</td></tr>
+      </tbody>
+    </table>
+    <p class="note">
+      The tuning evidence strengthened the final model-selection story rather than replacing the
+      holdout comparison. Prophet remained the best final model for both geographies on the untouched
+      2023-2025 holdout window, while the tuning summaries clarified which internal configurations
+      were most appropriate for each advanced model family.
+    </p>
+  </div>
+
   <h2>Final Historical vs. Projected Expenditure Plots</h2>
   <div class="gallery">
     <div class="figure">

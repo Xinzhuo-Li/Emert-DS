@@ -1,0 +1,69 @@
+geography,model,candidate_config,rolling_cv_mape,fit_stat_name,fit_stat_value,selected,selection_rule
+Michigan,arima,"order=(0, 0, 1)",11.62,aic,460.64,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(0, 0, 2)",9.67,aic,458.36,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(0, 1, 0)",5.74,aic,405.13,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(0, 1, 1)",5.34,aic,405.76,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(0, 1, 2)",5.02,aic,1130.88,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(0, 2, 0)",6.57,aic,360.31,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(0, 2, 1)",6.08,aic,361.06,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(0, 2, 2)",6.29,aic,361.55,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(1, 0, 0)",7.12,aic,456.05,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(1, 0, 1)",5.95,aic,455.94,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(1, 0, 2)",7.58,aic,497.26,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(1, 1, 0)",5.19,aic,405.21,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(1, 1, 1)",5.39,aic,402.43,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(1, 1, 2)",4.88,aic,80115971204839475511296.00,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(1, 2, 0)",5.99,aic,360.35,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(1, 2, 1)",6.68,aic,358.79,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(1, 2, 2)",5.79,aic,362.08,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(2, 0, 0)",6.45,aic,454.61,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(2, 0, 1)",6.95,aic,455.65,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(2, 0, 2)",7.53,aic,62361258198015.67,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(2, 1, 0)",4.90,aic,401.54,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(2, 1, 1)",6.56,aic,404.02,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(2, 1, 2)",5.20,aic,212185723322237.28,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(2, 2, 0)",3.39,aic,361.43,yes,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,arima,"order=(2, 2, 2)",7.25,aic,363.55,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+Michigan,holt_winters,simple_exponential_smoothing,5.74,sse,14875809682121895936.00,no,Lowest rolling CV MAPE; ties broken by simpler smoothing structure and lower SSE.
+Michigan,holt_winters,holt_winters_additive,2.87,sse,4450075971212175360.00,yes,Lowest rolling CV MAPE; ties broken by simpler smoothing structure and lower SSE.
+Michigan,holt_winters,holt_winters_additive_damped,6.13,sse,4409589186708452352.00,no,Lowest rolling CV MAPE; ties broken by simpler smoothing structure and lower SSE.
+Michigan,prophet,changepoint_prior_scale=0.05; n_changepoints=3,1.14,,,no,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+Michigan,prophet,changepoint_prior_scale=0.05; n_changepoints=5,1.12,,,yes,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+Michigan,prophet,changepoint_prior_scale=0.20; n_changepoints=3,4.70,,,no,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+Michigan,prophet,changepoint_prior_scale=0.20; n_changepoints=5,4.61,,,no,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+Michigan,prophet,changepoint_prior_scale=0.50; n_changepoints=3,4.58,,,no,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+Michigan,prophet,changepoint_prior_scale=0.50; n_changepoints=5,4.31,,,no,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+United States,arima,"order=(0, 0, 1)",13.56,aic,536.90,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(0, 0, 2)",11.12,aic,534.06,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(0, 1, 0)",7.08,aic,470.45,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(0, 1, 1)",6.72,aic,471.13,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(0, 1, 2)",6.43,aic,470.24,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(0, 2, 0)",3.52,aic,410.04,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(0, 2, 1)",3.47,aic,411.42,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(0, 2, 2)",3.43,aic,411.20,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(1, 0, 0)",8.05,aic,528.85,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(1, 0, 1)",6.00,aic,526.75,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(1, 0, 2)",9.07,aic,2575.58,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(1, 1, 0)",6.59,aic,474.97,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(1, 1, 1)",5.71,aic,463.58,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(1, 1, 2)",5.12,aic,607475708898014848.00,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(1, 2, 0)",3.48,aic,410.74,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(1, 2, 1)",2.82,aic,412.70,yes,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(1, 2, 2)",3.41,aic,413.15,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(2, 0, 0)",5.61,aic,522.73,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(2, 0, 1)",5.73,aic,524.94,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(2, 0, 2)",8.04,aic,1349253008117274112.00,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(2, 1, 0)",6.35,aic,471.46,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(2, 1, 1)",6.21,aic,465.53,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(2, 1, 2)",5.41,aic,559367929535669184.00,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(2, 2, 0)",5.82,aic,410.93,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,arima,"order=(2, 2, 2)",5.33,aic,415.14,no,Lowest rolling CV MAPE; ties broken by lower complexity and lower AIC.
+United States,holt_winters,simple_exponential_smoothing,7.08,sse,21094975276238373912576.00,no,Lowest rolling CV MAPE; ties broken by simpler smoothing structure and lower SSE.
+United States,holt_winters,holt_winters_additive,6.16,sse,5863228776499296337920.00,no,Lowest rolling CV MAPE; ties broken by simpler smoothing structure and lower SSE.
+United States,holt_winters,holt_winters_additive_damped,5.87,sse,5864753200242148507648.00,yes,Lowest rolling CV MAPE; ties broken by simpler smoothing structure and lower SSE.
+United States,prophet,changepoint_prior_scale=0.05; n_changepoints=3,5.05,,,no,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+United States,prophet,changepoint_prior_scale=0.05; n_changepoints=5,5.05,,,no,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+United States,prophet,changepoint_prior_scale=0.20; n_changepoints=3,5.05,,,no,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+United States,prophet,changepoint_prior_scale=0.20; n_changepoints=5,5.02,,,no,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+United States,prophet,changepoint_prior_scale=0.50; n_changepoints=3,4.85,,,no,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.
+United States,prophet,changepoint_prior_scale=0.50; n_changepoints=5,4.76,,,yes,Lowest rolling CV MAPE; ties broken by lower changepoint_prior_scale and fewer changepoints.

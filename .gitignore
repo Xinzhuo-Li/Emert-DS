@@ -5,4 +5,7 @@ __pycache__/
 .ipynb_checkpoints/
 .matplotlib-cache/
 ~$*.xlsx
+~$*.docx
 src/output_visualization/build_report_package.py
+pre.docx
+presentation/

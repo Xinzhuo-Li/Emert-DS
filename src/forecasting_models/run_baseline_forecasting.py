@@ -46,6 +46,7 @@ def main() -> None:
         "United States": read_history(PROCESSED_DIR / "medicaid_national_timeseries.csv"),
     }
     holdout = read_holdout(TABLES_DIR / "baseline_holdout_predictions.csv")
+    phase_dir = FIGURES_DIR / "phase_05_baseline_forecasting"
 
     for geography in holdout["geography"].unique():
         for model_name in holdout.loc[holdout["geography"] == geography, "model"].unique():
@@ -58,14 +59,13 @@ def main() -> None:
                 holdout_slice,
                 geography,
                 model_name,
-                FIGURES_DIR / f"{geography.lower().replace(' ', '_')}_{model_name}_holdout.png",
+                phase_dir / f"{geography.lower().replace(' ', '_')}_{model_name}_holdout.png",
             )
 
     print("Created baseline forecasting figures:")
-    print("-", FIGURES_DIR / "michigan_linear_regression_holdout.png")
-    print("-", FIGURES_DIR / "michigan_polynomial_regression_degree_2_holdout.png")
-    print("-", FIGURES_DIR / "united_states_linear_regression_holdout.png")
-    print("-", FIGURES_DIR / "united_states_polynomial_regression_degree_2_holdout.png")
+    for geography in holdout["geography"].unique():
+        for model_name in holdout.loc[holdout["geography"] == geography, "model"].unique():
+            print("-", phase_dir / f"{geography.lower().replace(' ', '_')}_{model_name}_holdout.png")
 
 
 if __name__ == "__main__":

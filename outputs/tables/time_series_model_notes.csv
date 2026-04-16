@@ -1,3 +1,3 @@
 geography,model_category,model_used,note
-Michigan,ARIMA / SARIMA,arima,"Annual data does not support meaningful seasonal estimation, so non-seasonal ARIMA with selected order (1, 2, 1) was used in place of SARIMA."
-United States,ARIMA / SARIMA,arima,"Annual data does not support meaningful seasonal estimation, so non-seasonal ARIMA with selected order (0, 2, 0) was used in place of SARIMA."
+Michigan,ARIMA / SARIMA,arima,"Annual data does not support meaningful seasonal estimation, so non-seasonal ARIMA with selected order (2, 2, 0) was used in place of SARIMA."
+United States,ARIMA / SARIMA,arima,"Annual data does not support meaningful seasonal estimation, so non-seasonal ARIMA with selected order (1, 2, 1) was used in place of SARIMA."

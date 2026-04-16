@@ -1,11 +1,11 @@
 geography,model_family,model,model_details,train_end_year,test_start_year,test_end_year,mae,rmse,mape
 Michigan,baseline,linear_regression,,2022,2023,2025,1848128323.06,1983664301.41,7.12
-Michigan,baseline,polynomial_regression_degree_2,,2022,2023,2025,2432728381.78,2593707374.4,9.38
+Michigan,baseline,polynomial_regression_degree_2,selected_degree=2; rolling_cv_mape=6.97; selection=rolling_cv_with_parsimony,2022,2023,2025,2432728381.78,2593707374.4,9.38
 United States,baseline,linear_regression,,2022,2023,2025,112706434239.52,116157169999.68,11.64
-United States,baseline,polynomial_regression_degree_2,,2022,2023,2025,47102709358.58,47978768922.1,4.89
-Michigan,time_series,arima,"order=(1, 2, 1)",2022,2023,2025,1874605435.81,2043074937.14,7.2
-Michigan,time_series,holt_winters,holt_winters_additive,2022,2023,2025,2026125304.66,2165374071.43,7.81
-Michigan,time_series,prophet,linear_growth_no_seasonality,2022,2023,2025,1742600946.76,1867808861.48,6.71
-United States,time_series,arima,"order=(0, 2, 0)",2022,2023,2025,33126607683.76,35702415248.31,3.4
-United States,time_series,holt_winters,holt_winters_additive,2022,2023,2025,26688505965.2,29144349989.41,2.74
-United States,time_series,prophet,linear_growth_no_seasonality,2022,2023,2025,6119587188.18,8110079553.23,0.64
+United States,baseline,polynomial_regression_degree_2,selected_degree=2; rolling_cv_mape=4.95; selection=rolling_cv_with_parsimony,2022,2023,2025,47102709358.58,47978768922.1,4.89
+Michigan,time_series,arima,"order=(2, 2, 0); rolling_cv_mape=3.39",2022,2023,2025,2989438536.21,3215609455.08,11.51
+Michigan,time_series,holt_winters,holt_winters_additive; rolling_cv_mape=2.87,2022,2023,2025,1848128326.09,1983664304.31,7.12
+Michigan,time_series,prophet,linear_growth_no_seasonality; changepoint_prior_scale=0.05; n_changepoints=5; rolling_cv_mape=1.12,2022,2023,2025,1838739450.41,1974614390.01,7.08
+United States,time_series,arima,"order=(1, 2, 1); rolling_cv_mape=2.82",2022,2023,2025,30200907596.88,32700961463.01,3.1
+United States,time_series,holt_winters,holt_winters_additive_damped; rolling_cv_mape=5.87,2022,2023,2025,25222513087.28,27538941275.82,2.59
+United States,time_series,prophet,linear_growth_no_seasonality; changepoint_prior_scale=0.50; n_changepoints=5; rolling_cv_mape=4.76,2022,2023,2025,7083680428.23,9302608106.34,0.74
